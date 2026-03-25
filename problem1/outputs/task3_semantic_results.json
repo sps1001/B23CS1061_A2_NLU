@@ -1,0 +1,460 @@
+{
+  "CBOW": {
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "award",
+          "similarity": 0.9995
+        },
+        {
+          "word": "faculty",
+          "similarity": 0.9994
+        },
+        {
+          "word": "industry",
+          "similarity": 0.9994
+        },
+        {
+          "word": "required",
+          "similarity": 0.9993
+        },
+        {
+          "word": "supervisor",
+          "similarity": 0.9993
+        }
+      ],
+      "student": [
+        {
+          "word": "registered",
+          "similarity": 0.9991
+        },
+        {
+          "word": "completed",
+          "similarity": 0.999
+        },
+        {
+          "word": "academic",
+          "similarity": 0.9989
+        },
+        {
+          "word": "maximum",
+          "similarity": 0.9988
+        },
+        {
+          "word": "requirements",
+          "similarity": 0.9987
+        }
+      ],
+      "phd": [
+        {
+          "word": "mtech",
+          "similarity": 0.9968
+        },
+        {
+          "word": "bouquet",
+          "similarity": 0.9888
+        },
+        {
+          "word": "none",
+          "similarity": 0.9883
+        },
+        {
+          "word": "programme",
+          "similarity": 0.9859
+        },
+        {
+          "word": "distribution",
+          "similarity": 0.9858
+        }
+      ],
+      "exam": [
+        {
+          "word": "including",
+          "similarity": 0.9966
+        },
+        {
+          "word": "emerging",
+          "similarity": 0.9966
+        },
+        {
+          "word": "international",
+          "similarity": 0.9966
+        },
+        {
+          "word": "smart",
+          "similarity": 0.9966
+        },
+        {
+          "word": "industry",
+          "similarity": 0.9965
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "query": "ug - btech + pg",
+        "readable": "ug : btech  ::  pg : ?",
+        "results": [
+          {
+            "word": "report",
+            "similarity": 0.9907
+          },
+          {
+            "word": "work",
+            "similarity": 0.9907
+          },
+          {
+            "word": "candidate",
+            "similarity": 0.9906
+          },
+          {
+            "word": "eligible",
+            "similarity": 0.9906
+          },
+          {
+            "word": "two",
+            "similarity": 0.9905
+          }
+        ]
+      },
+      {
+        "query": "mtech - postgraduate + phd",
+        "readable": "mtech : postgraduate  ::  phd : ?",
+        "results": [
+          {
+            "word": "tech",
+            "similarity": 0.9883
+          },
+          {
+            "word": "compulsory",
+            "similarity": 0.9809
+          },
+          {
+            "word": "type",
+            "similarity": 0.9728
+          },
+          {
+            "word": "prerequisite",
+            "similarity": 0.9723
+          },
+          {
+            "word": "elective",
+            "similarity": 0.9704
+          }
+        ]
+      },
+      {
+        "query": "professor - teaching + researcher",
+        "readable": "professor : teaching  ::  researcher : ?",
+        "results": [
+          {
+            "word": "biometrics",
+            "similarity": 0.9947
+          },
+          {
+            "word": "smart",
+            "similarity": 0.9946
+          },
+          {
+            "word": "components",
+            "similarity": 0.9946
+          },
+          {
+            "word": "experience",
+            "similarity": 0.9945
+          },
+          {
+            "word": "dr",
+            "similarity": 0.9945
+          }
+        ]
+      },
+      {
+        "query": "semester - student + admission",
+        "readable": "semester : student  ::  admission : ?",
+        "results": [
+          {
+            "word": "ii",
+            "similarity": 0.9986
+          },
+          {
+            "word": "grades",
+            "similarity": 0.9982
+          },
+          {
+            "word": "ch",
+            "similarity": 0.9982
+          },
+          {
+            "word": "summer",
+            "similarity": 0.9982
+          },
+          {
+            "word": "given",
+            "similarity": 0.998
+          }
+        ]
+      },
+      {
+        "query": "undergraduate - degree + phd",
+        "readable": "undergraduate : degree  ::  phd : ?",
+        "results": [
+          {
+            "word": "bouquet",
+            "similarity": 0.987
+          },
+          {
+            "word": "distribution",
+            "similarity": 0.9856
+          },
+          {
+            "word": "prml",
+            "similarity": 0.9855
+          },
+          {
+            "word": "instructor",
+            "similarity": 0.9836
+          },
+          {
+            "word": "programme",
+            "similarity": 0.9834
+          }
+        ]
+      },
+      {
+        "query": "jodhpur - iit + jaipur",
+        "readable": "jodhpur : iit  ::  jaipur : ?",
+        "results": null
+      }
+    ]
+  },
+  "SkipGram": {
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "faculty",
+          "similarity": 0.9419
+        },
+        {
+          "word": "member",
+          "similarity": 0.9382
+        },
+        {
+          "word": "undergraduate",
+          "similarity": 0.9374
+        },
+        {
+          "word": "award",
+          "similarity": 0.9347
+        },
+        {
+          "word": "chairman",
+          "similarity": 0.9298
+        }
+      ],
+      "student": [
+        {
+          "word": "register",
+          "similarity": 0.9804
+        },
+        {
+          "word": "registered",
+          "similarity": 0.9754
+        },
+        {
+          "word": "registration",
+          "similarity": 0.9732
+        },
+        {
+          "word": "academic",
+          "similarity": 0.9713
+        },
+        {
+          "word": "must",
+          "similarity": 0.9707
+        }
+      ],
+      "phd": [
+        {
+          "word": "mtech",
+          "similarity": 0.9908
+        },
+        {
+          "word": "program",
+          "similarity": 0.9532
+        },
+        {
+          "word": "tech",
+          "similarity": 0.9392
+        },
+        {
+          "word": "masters",
+          "similarity": 0.931
+        },
+        {
+          "word": "dual",
+          "similarity": 0.9212
+        }
+      ],
+      "exam": [
+        {
+          "word": "entrepreneurial",
+          "similarity": 0.9971
+        },
+        {
+          "word": "middle",
+          "similarity": 0.9969
+        },
+        {
+          "word": "component",
+          "similarity": 0.9968
+        },
+        {
+          "word": "subject",
+          "similarity": 0.9968
+        },
+        {
+          "word": "copies",
+          "similarity": 0.9968
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "query": "ug - btech + pg",
+        "readable": "ug : btech  ::  pg : ?",
+        "results": [
+          {
+            "word": "allowed",
+            "similarity": 0.9723
+          },
+          {
+            "word": "calculation",
+            "similarity": 0.9723
+          },
+          {
+            "word": "assistantship",
+            "similarity": 0.9703
+          },
+          {
+            "word": "requirement",
+            "similarity": 0.9679
+          },
+          {
+            "word": "complete",
+            "similarity": 0.9653
+          }
+        ]
+      },
+      {
+        "query": "mtech - postgraduate + phd",
+        "readable": "mtech : postgraduate  ::  phd : ?",
+        "results": [
+          {
+            "word": "tech",
+            "similarity": 0.846
+          },
+          {
+            "word": "type",
+            "similarity": 0.8446
+          },
+          {
+            "word": "elective",
+            "similarity": 0.8354
+          },
+          {
+            "word": "compulsory",
+            "similarity": 0.8081
+          },
+          {
+            "word": "programme",
+            "similarity": 0.7964
+          }
+        ]
+      },
+      {
+        "query": "professor - teaching + researcher",
+        "readable": "professor : teaching  ::  researcher : ?",
+        "results": [
+          {
+            "word": "aiims",
+            "similarity": 0.9835
+          },
+          {
+            "word": "outside",
+            "similarity": 0.9827
+          },
+          {
+            "word": "recognized",
+            "similarity": 0.9814
+          },
+          {
+            "word": "chair",
+            "similarity": 0.9814
+          },
+          {
+            "word": "moderation",
+            "similarity": 0.9809
+          }
+        ]
+      },
+      {
+        "query": "semester - student + admission",
+        "readable": "semester : student  ::  admission : ?",
+        "results": [
+          {
+            "word": "category",
+            "similarity": 0.9437
+          },
+          {
+            "word": "ay",
+            "similarity": 0.9358
+          },
+          {
+            "word": "july",
+            "similarity": 0.9303
+          },
+          {
+            "word": "ii",
+            "similarity": 0.9267
+          },
+          {
+            "word": "table",
+            "similarity": 0.9228
+          }
+        ]
+      },
+      {
+        "query": "undergraduate - degree + phd",
+        "readable": "undergraduate : degree  ::  phd : ?",
+        "results": [
+          {
+            "word": "pg",
+            "similarity": 0.9284
+          },
+          {
+            "word": "candidates",
+            "similarity": 0.9262
+          },
+          {
+            "word": "completing",
+            "similarity": 0.9256
+          },
+          {
+            "word": "branches",
+            "similarity": 0.9219
+          },
+          {
+            "word": "pre",
+            "similarity": 0.9178
+          }
+        ]
+      },
+      {
+        "query": "jodhpur - iit + jaipur",
+        "readable": "jodhpur : iit  ::  jaipur : ?",
+        "results": null
+      }
+    ]
+  }
+}

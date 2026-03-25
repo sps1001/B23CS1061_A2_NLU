@@ -1,0 +1,23 @@
+{
+  "VanillaRNN": {
+    "name": "VanillaRNN",
+    "params": 223325,
+    "best_val_loss": 1.98029,
+    "train_time_s": 12.2,
+    "checkpoint": "models/VanillaRNN.pt"
+  },
+  "BLSTM": {
+    "name": "BLSTM",
+    "params": 472186,
+    "best_val_loss": 1.99187,
+    "train_time_s": 9.1,
+    "checkpoint": "models/BLSTM.pt"
+  },
+  "AttentionRNN": {
+    "name": "AttentionRNN",
+    "params": 362077,
+    "best_val_loss": 1.98686,
+    "train_time_s": 30.1,
+    "checkpoint": "models/AttentionRNN.pt"
+  }
+}

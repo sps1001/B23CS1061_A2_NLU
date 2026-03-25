@@ -1,0 +1,16 @@
+{
+  "CBOW": {
+    "model_file": "models/CBOW_dim200_win2_neg5.model",
+    "embedding_dim": 200,
+    "window_size": 2,
+    "negative_samples": 5,
+    "avg_nn_sim": 0.9979
+  },
+  "SkipGram": {
+    "model_file": "models/SkipGram_dim200_win2_neg5.model",
+    "embedding_dim": 200,
+    "window_size": 2,
+    "negative_samples": 5,
+    "avg_nn_sim": 0.9743
+  }
+}
