@@ -5,7 +5,7 @@
 | **Roll Number** | B23CS1061 |
 | **Course** | CSL 7640 — Natural Language Understanding |
 | **Assignment** | 2 |
-| **Deadline** | March 20, 2026 |
+| **Deadline** | March 25, 2026 |
 
 ---
 
