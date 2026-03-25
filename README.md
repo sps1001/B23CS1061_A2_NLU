@@ -9,46 +9,79 @@
 
 ---
 
+
+## How to Run
+
+### Problem 1 — Word2Vec
+
+```bash
+cd problem1/source_code
+
+python prepare_corpus.py      # Step 1: build corpus from PDFs + web scrape
+python wordcloud_stats.py     # Step 2: stats + word cloud
+python train_word2vec.py      # Step 3: train 54 Gensim models
+python word2vec_scratch.py    # Step 4: train from scratch (PyTorch)
+python task2_heatmaps.py      # Step 5: hyperparameter heatmaps
+python task3_semantic.py      # Step 6: nearest neighbours + analogies
+python task4_visualize.py     # Step 7: PCA + t-SNE plots
+```
+
+### Problem 2 — RNN Name Generation
+
+```bash
+cd problem2/source_code
+
+python train.py       # trains VanillaRNN, BLSTM, AttentionRNN (saves .pt checkpoints)
+python evaluate.py    # generates 200 names per model, computes metrics, writes report
+```
+
+
 ## Repository Structure
 
 ```
-NLU_Assignment-2/                    ← GitHub repository root
+b23cs1061_a2/                        ← repository root
 ├── README.md                        ← this file (combined report)
 │
-├── q1_source_code/                  ← Problem 1: Word2Vec
-│   ├── scraper.py                   # IIT Jodhpur website scraper (BeautifulSoup)
-│   ├── prepare_corpus.py            # PDF extraction (pdfplumber) + full preprocessing
-│   ├── wordcloud_stats.py           # dataset statistics + word cloud
-│   ├── train_word2vec.py            # Gensim Word2Vec — 54-model hyperparameter grid
-│   ├── word2vec_scratch.py          # PyTorch from-scratch CBOW + SkipGram
-│   ├── task2_heatmaps.py            # hyperparameter heatmaps (Task 2)
-│   ├── task3_semantic.py            # nearest neighbours + analogy experiments (Task 3)
-│   ├── task4_visualize.py           # PCA + t-SNE visualizations (Task 4)
-│   └── commands.sh                  # full pipeline run script (all steps)
+├── problem1/                        ← Problem 1: Word2Vec
+│   ├── source_code/
+│   │   ├── scraper.py               # IIT Jodhpur website scraper (BeautifulSoup)
+│   │   ├── prepare_corpus.py        # PDF extraction (pdfplumber) + full preprocessing
+│   │   ├── wordcloud_stats.py       # dataset statistics + word cloud
+│   │   ├── train_word2vec.py        # Gensim Word2Vec — 54-model hyperparameter grid
+│   │   ├── word2vec_scratch.py      # PyTorch from-scratch CBOW + SkipGram
+│   │   ├── task2_heatmaps.py        # hyperparameter heatmaps (Task 2)
+│   │   ├── task3_semantic.py        # nearest neighbours + analogy experiments (Task 3)
+│   │   ├── task4_visualize.py       # PCA + t-SNE visualizations (Task 4)
+│   │   └── commands.sh              # full pipeline run script (all steps)
+│   ├── data/
+│   │   ├── corpus.txt               # cleaned IIT Jodhpur corpus
+│   │   └── raw_corpus.txt           # raw scraped text
+│   └── outputs/                     # generated plots, results, reports
 │
-├── q2_source_code/                  ← Problem 2: Character-level RNN Name Generation
-│   ├── dataset.py                   # char vocab (29 tokens), encoding, DataLoader
-│   ├── models.py                    # VanillaRNN / BidirectionalLSTM / AttentionRNN
-│   ├── train.py                     # training loop, checkpointing, loss curve plots
-│   └── evaluate.py                  # novelty + diversity metrics + qualitative report
+├── problem2/                        ← Problem 2: Character-level RNN Name Generation
+│   ├── source_code/
+│   │   ├── dataset.py               # char vocab (29 tokens), encoding, DataLoader
+│   │   ├── models.py                # VanillaRNN / BidirectionalLSTM / AttentionRNN
+│   │   ├── train.py                 # training loop, checkpointing, loss curve plots
+│   │   ├── evaluate.py              # novelty + diversity metrics + qualitative report
+│   │   └── commands.sh              # full pipeline run script
+│   ├── data/
+│   │   └── TrainingNames.txt        # name dataset
+│   └── outputs/                     # generated names, loss curves, evaluation reports
 │
-├── images/                          ← all figures used in this README
-│   ├── wordcloud.png
-│   ├── task2_heatmaps_combined.png
-│   ├── scratch_loss_curves.png
-│   ├── task4_combined.png
-│   ├── task4_pca_cbow.png
-│   ├── task4_pca_skipgram.png
-│   ├── task4_tsne_cbow.png
-│   ├── task4_tsne_skipgram.png
-│   ├── all_loss_curves.png
-│   ├── VanillaRNN_loss_curve.png
-│   ├── BLSTM_loss_curve.png
-│   └── AttentionRNN_loss_curve.png
-│
-└── b23cs1061/                       ← submission folder
-    ├── corpus.txt                   # cleaned IIT Jodhpur corpus (0.3356 MB, 3051 sentences)
-    └── report.pdf                   # exported PDF of this README
+└── images/                          ← all figures used in this README
+    ├── wordcloud.png
+    ├── task2_heatmaps_combined.png
+    ├── scratch_loss_curves.png
+    ├── task4_combined.png
+    ├── task4_pca_cbow.png
+    ├── task4_pca_skipgram.png
+    ├── task4_tsne_cbow.png
+    ├── task4_tsne_skipgram.png
+    ├── all_loss_curves.png
+    ├── VanillaRNN_loss_curve.png
+    ├── BLSTM_loss_curve.png
+    └── AttentionRNN_loss_curve.png
 ```
 
 ---
@@ -685,31 +718,6 @@ The plain RNN hidden state is updated as `h_t = tanh(W·h_{t-1} + U·x_t + b)`. 
 The Bahdanau attention context `ctx = Σ α_s · h_s` creates a **direct retrieval path** to any past hidden state — bypassing sequential compression entirely. When generating the suffix "-kesh", the model can attend directly back to h_1 (the 'C' step), giving it explicit access to the initial consonant cluster. This is why AttentionRNN produces the most phonetically coherent names.
 
 ---
-
-## How to Run
-
-### Problem 1 — Word2Vec
-
-```bash
-cd NLU_Assignment-2/q1_source_code
-
-python prepare_corpus.py      # Step 1: build corpus from PDFs + web scrape
-python wordcloud_stats.py     # Step 2: stats + word cloud
-python train_word2vec.py      # Step 3: train 54 Gensim models
-python word2vec_scratch.py    # Step 4: train from scratch (PyTorch)
-python task2_heatmaps.py      # Step 5: hyperparameter heatmaps
-python task3_semantic.py      # Step 6: nearest neighbours + analogies
-python task4_visualize.py     # Step 7: PCA + t-SNE plots
-```
-
-### Problem 2 — RNN Name Generation
-
-```bash
-cd NLU_Assignment-2/q2_source_code
-
-python train.py       # trains VanillaRNN, BLSTM, AttentionRNN (saves .pt checkpoints)
-python evaluate.py    # generates 200 names per model, computes metrics, writes report
-```
 
 ---
 
